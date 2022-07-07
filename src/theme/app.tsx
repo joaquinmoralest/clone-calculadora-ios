@@ -12,8 +12,9 @@ const styles = StyleSheet.create({
   },
   result: {
     color: 'white',
-    fontSize: 60,
+    fontSize: 80,
     textAlign: 'right',
+    marginBottom: 10,
   },
   smallResult: {
     color: 'rgba(255,255,255,0.5)',

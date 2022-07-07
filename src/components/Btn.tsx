@@ -4,19 +4,20 @@ import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 interface Props {
   text: string,
   type?: 'primary' | 'function' | 'operator',
-  width: boolean,
+  width?: boolean,
+  action: ( textNumber: string ) => void,
 }
 
-const Btn = ({ text, type, width = false }: Props) => {
+const Btn = ({ text, type, width = false, action }: Props) => {
   return (
-    <TouchableOpacity>
+    <TouchableOpacity onPress={ () => action( text ) }>
       <View style={[
         styles.btn,
         (type === 'primary') ? styles.btnPrimary :
         (type === 'function') ? styles.btnFunction : styles.btnOperator,
         (width) && styles.btnLarge,
       ]}>
-        <Text style={ styles.btnText }> { text } </Text>
+        <Text style={ styles.btnText }>{ text }</Text>
       </View>
     </TouchableOpacity>
   )
@@ -28,7 +29,7 @@ const styles = StyleSheet.create({
     width: 80,
     borderRadius: 100,
     justifyContent: 'center',
-    marginHorizontal: 10,
+    marginHorizontal: 8,
   },
   btnText: {
     textAlign: 'center',
