@@ -29,7 +29,7 @@ const styles = StyleSheet.create({
     width: 80,
     borderRadius: 100,
     justifyContent: 'center',
-    marginHorizontal: 8,
+    marginHorizontal: 4,
   },
   btnText: {
     textAlign: 'center',
@@ -48,7 +48,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#FF9427',
   },
   btnLarge: {
-    width: 180,
+    width: 168,
   },
 })
 
